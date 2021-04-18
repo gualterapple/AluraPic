@@ -1,10 +1,1 @@
-
-<div class="container">
-    <div class="row">
-            <app-photo
-            *ngFor="let foto of fotos"
-            [link]="foto.url"
-            [alt]="foto.description">
-            </app-photo>      
-    </div>
-</div>
+<app-photos [photos] = "fotos"></app-photos>
