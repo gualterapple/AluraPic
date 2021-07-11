@@ -39,8 +39,10 @@ export class SigninComponent implements OnInit {
     const userName = this.loginForm.get('userName')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    this.authService.authenticate(userName, password)
-    .subscribe( 
+    this.router.navigateByUrl('listar/:UserName')
+
+    /*this.authService.authenticate(userName, password)
+    .subscribe(
       () => {
         console.log("Autenticado");
         this.router.navigateByUrl('listar/:UserName')
@@ -48,7 +50,7 @@ export class SigninComponent implements OnInit {
       err => {
         console.log(err);
         this.loginForm.reset();
-      });
+      });*/
   }
 
 }

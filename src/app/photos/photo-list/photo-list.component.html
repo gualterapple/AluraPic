@@ -1,17 +1,9 @@
-<div class="text-center my-3">
-    <form>
-        <input
-            class="rounded"
-            type="search"
-            placeholder="search..."
-            autofocus
-            (keyup)="onKeyUp($event)"
-            #campo>
-    </form>
-</div>
+<app-search (onTyping)="filter = $event" [value]="filter"></app-search>
+
 <p class="text-center text-muted" *ngIf="!fotos.length">
     Desculpe, foto não encontrada
 </p>
+
 <app-photos [photos] = "fotos | filterByDescription: filter"></app-photos>
 <app-load-button [hasMore] = "hasMore" (click)="load()"></app-load-button>
 
