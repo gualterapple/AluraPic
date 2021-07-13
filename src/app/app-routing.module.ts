@@ -11,7 +11,7 @@ const routes: Routes = [
 
   { path: '', component:  SigninComponent},
 
-  { path: 'listar/:UserName', component: PhotoListComponent,
+  { path: 'listar', component: PhotoListComponent,
 
   resolve: {
       photos: PhotoListResolver}},
