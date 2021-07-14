@@ -1,4 +1,4 @@
-import { PhotoComponent } from './photos/photo/photo.component';
+import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,7 +17,8 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     PhotosModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    CoreModule
     ],
   providers: [],
   bootstrap: [AppComponent]

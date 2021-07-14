@@ -29,8 +29,8 @@ export class SigninComponent implements OnInit {
 
     this.loginForm = this.formBuilder.group(
       {
-        userName: ['', Validators.required],
-        password: ['', Validators.required]
+        userName: ['gualter@gmail.com', Validators.required],
+        password: ['123456', Validators.required]
       }
     );
 
@@ -45,12 +45,11 @@ export class SigninComponent implements OnInit {
 
     this.authService.authenticate(userName, password)
     .subscribe(
-      () => {
+      success => {
         console.log("Autenticado");
         this.router.navigateByUrl('listar')
       },
       err => {
-        console.log(err);
         this.loginForm.reset();
         //if(this.isPlatformBrowser.isPlataformBrowser())
         this.userNameInput.nativeElement.focus();
