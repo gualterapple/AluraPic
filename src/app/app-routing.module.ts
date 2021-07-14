@@ -1,3 +1,4 @@
+import { AuthGuard } from './core/auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
@@ -9,7 +10,9 @@ import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 
 const routes: Routes = [
 
-  { path: '', component:  SigninComponent},
+  { path: '',
+    component:  SigninComponent,
+    canActivate: [AuthGuard]},
 
   { path: 'listar', component: PhotoListComponent,
 
