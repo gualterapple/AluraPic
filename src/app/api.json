@@ -9,12 +9,19 @@
       "user_join_date": "2018-04-12 20: 24: 19"
     },
     {
-      "user_id": 2,
+      "id": 2,
       "user_name": "gualter",
       "user_email": "gualter@alurapic.com.br",
       "user_password": 123,
       "user_full_name": "Gualter",
       "user_join_date": "2018-04-13 21: 24: 19"
+    },
+    {
+      "email": "sdjdhk@sdkj.com",
+      "userName": "kjkjkk",
+      "fullName": "jjkdjkfjkj",
+      "password": "kjkjkjkj",
+      "id": 3
     }
   ],
   "photos": [
@@ -23,8 +30,8 @@
       "description": "primeira",
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -32,8 +39,8 @@
       "description": "segunda",
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://static6.depositphotos.com/1030334/671/i/600/depositphotos_6710151-stock-photo-eyes.jpg"
     },
     {
@@ -41,8 +48,8 @@
       "description": "terceira",
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -50,8 +57,8 @@
       "description": "quarta",
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -59,8 +66,8 @@
       "description": "quinta",
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -68,8 +75,8 @@
       "description": "sexta",
       "allowComments": "",
       "postDate": "2021-04-12T20:27:17.161Z",
-      "likes":0,
-      "comments":0,
+      "likes": 0,
+      "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     }
   ]
