@@ -14,8 +14,7 @@ export class SigninComponent implements OnInit {
   loginForm = new FormGroup({});
 
   @ViewChild('userNameInput')
-  userNameInput : any;
-
+  userNameInput !: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,6 +24,9 @@ export class SigninComponent implements OnInit {
 
   }
 
+  ngAfterViewInit() {
+    this.userNameInput.nativeElement.focus();
+  }
   ngOnInit(): void {
 
     this.loginForm = this.formBuilder.group(
