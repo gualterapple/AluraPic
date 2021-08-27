@@ -26,7 +26,6 @@ export class AuthService {
           var r: any = res;
           const authToken = r.body.token;
           this.UserService.setToken(authToken);
-          console.log(authToken);
         })
       );
   }

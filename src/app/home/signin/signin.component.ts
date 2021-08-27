@@ -48,7 +48,6 @@ export class SigninComponent implements OnInit {
     this.authService.authenticate(userName, password)
     .subscribe(
       success => {
-        console.log("Autenticado");
         this.router.navigateByUrl('listar')
       },
       err => {
