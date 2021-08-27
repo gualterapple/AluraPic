@@ -18,6 +18,7 @@ export class TokenService
 
   removeToken(){
     window.localStorage.removeItem(KEY);
+    //Criando alterações na branch servicos administrativos
 
   }
 }
