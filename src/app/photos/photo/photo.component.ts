@@ -8,9 +8,9 @@ import { Component, Input } from '@angular/core';
 export class PhotoComponent {
 
 
-  @Input() link = '';
+  @Input() link : string = '';
 
-  @Input() alt = 'xamarin';
+  @Input() alt : string = 'xamarin';
 
 
 }
