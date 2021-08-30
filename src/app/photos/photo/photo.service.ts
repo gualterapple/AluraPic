@@ -19,4 +19,23 @@ export class PhotoService {
       params: params,
     });
   }
+
+  upload(description: string, allowComments: boolean, file: File)
+  {
+
+    /*USE THIS CODE SUBMIT AN IMAGE TO REAL API
+    const formData = new FormData();
+    formData.append('description', description);
+    formData.append('allowComments', allowComments ? 'true' : 'false');
+    formData.append('url', file);*/
+
+    //USE THIS CODE SUBMIT AN IMAGE TO MOCK
+    const formData = {
+      description: description,
+      allowComments: allowComments ? 'true' : 'false',
+      url: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+    }
+
+    return this.http.post(API + 'photos', formData);
+  }
 }
