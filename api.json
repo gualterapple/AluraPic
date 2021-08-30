@@ -79,5 +79,9 @@
       "comments": 0,
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     }
-  ]
+  ],
+  "login":
+  {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2MmQxNWQ3My04OWM0LTQzMTctYTMyZS03ZTM5YTQyNTI5NTEiLCJyb2xlIjoiU2VsbGVyIiwiRW1haWwiOiJndWFsdGVyQGdtYWlsLmNvbSIsIk5vbWUiOiJHdWFsdGVyIiwibmJmIjoxNjMwMjg0MzMyLCJleHAiOjE2MzAzNzA3MzIsImlhdCI6MTYzMDI4NDMzMn0.xl8NN5yoNsEgKRDblOmme5bzQWbIE-EleJBbaWO-e1g"}
 }
+
+
