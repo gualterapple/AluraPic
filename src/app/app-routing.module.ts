@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/auth/auth.guard';
+import { LoginGuard } from './core/auth/login.guard';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 
@@ -15,7 +17,8 @@ const routes: Routes = [
 
   {
     path: 'home',
-    loadChildren: ()=> import("./home/home.module").then(x => x.HomeModule)
+    canActivate: [LoginGuard],
+    loadChildren: () => import("./home/home.module").then(x => x.HomeModule)
   },
 
   {
@@ -26,12 +29,15 @@ const routes: Routes = [
       photos: PhotoListResolver,
     },
   },
-  { path: 'nova/foto', component: PhotoFormComponent },
+  {
+    path: 'photo/add', component: PhotoFormComponent,
+    canActivate: [AuthGuard]
+  },
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
