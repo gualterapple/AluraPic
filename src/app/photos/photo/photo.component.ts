@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+const CLOUD = 'localhost:3000/imgs/';
+
 @Component({
   selector: 'app-photo',
   templateUrl: './photo.component.html',
@@ -10,12 +12,15 @@ export class PhotoComponent {
 
   private _url = '';
 
-  @Input() link : string = '';
-
-  @Input() alt : string = 'xamarin';
+  @Input() description = '';
 
   @Input() set url(url: string)
   {
+    if(!url.startsWith('data'))
+    {
+      this._url = CLOUD + url;
+    }
+    else
     this._url = url;
   }
 

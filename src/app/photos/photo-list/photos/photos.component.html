@@ -3,7 +3,7 @@
     <div class="col-md-4" *ngFor="let foto of cols" appDarkenOnHover brightness="90%">
       <a [routerLink]="['/photo',foto.id]">
       <app-card [title]="foto.description">
-        <app-photo [link]="foto.url" [alt]="foto.description"> </app-photo>
+        <app-photo [url]="foto.url" [description]="foto.description"> </app-photo>
         <div class="text-center p1">
           <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2">
             {{ foto.likes }}</i>
