@@ -10,13 +10,13 @@ export class PhotoService {
   constructor(private http: HttpClient) {}
 
   listFromUser(userName: string) {
-    return this.http.get<Photo[]>(`${API}photos`);
+    return this.http.get<Photo[]>(`${API}${userName}/photos`);
   }
 
   listFromUserPaginated(userName: string, page: number) {
     const params = new HttpParams().append('page', page.toString());
 
-    return this.http.get<Photo[]>(`${API}userName/photos`, {
+    return this.http.get<Photo[]>(`${API}${userName}/photos`, {
       params: params,
     });
   }
@@ -24,20 +24,13 @@ export class PhotoService {
   upload(description: string, allowComments: boolean, file: File)
   {
 
-    /*USE THIS CODE SUBMIT AN IMAGE TO REAL API
     const formData = new FormData();
     formData.append('description', description);
     formData.append('allowComments', allowComments ? 'true' : 'false');
-    formData.append('url', file);*/
+    formData.append('imageFile', file);
 
-    //USE THIS CODE SUBMIT AN IMAGE TO MOCK
-    const formData = {
-      description: description,
-      allowComments: allowComments ? 'true' : 'false',
-      url: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-    }
+    return this.http.post(`${API}photos/upload`, formData);
 
-    return this.http.post(`${API}photos`, formData);
   }
 
   findById(id: number)
@@ -48,6 +41,11 @@ export class PhotoService {
   getComment(id: number)
   {
     return this.http.get<PhotoComment[]>(`${API}photos/${id}`);
+  }
+
+  addComment(id: number, comment: string)
+  {
+    return this.http.post<PhotoComment[]>(`${API}photos/${id}/comments`,{comment});
   }
 
 }

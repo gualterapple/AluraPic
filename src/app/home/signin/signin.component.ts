@@ -31,8 +31,8 @@ export class SigninComponent implements OnInit {
 
     this.loginForm = this.formBuilder.group(
       {
-        userName: ['gualter@gmail.com', Validators.required],
-        password: ['123456', Validators.required]
+        userName: ['flavio', Validators.required],
+        password: ['123', Validators.required]
       }
     );
 
@@ -48,7 +48,7 @@ export class SigninComponent implements OnInit {
     this.authService.authenticate(userName, password)
     .subscribe(
       success => {
-        this.router.navigateByUrl('listar')
+        this.router.navigateByUrl('user/' + userName)
       },
       err => {
         this.loginForm.reset();

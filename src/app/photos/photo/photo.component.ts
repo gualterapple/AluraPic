@@ -8,9 +8,20 @@ import { Component, Input } from '@angular/core';
 export class PhotoComponent {
 
 
+  private _url = '';
+
   @Input() link : string = '';
 
   @Input() alt : string = 'xamarin';
 
+  @Input() set url(url: string)
+  {
+    this._url = url;
+  }
+
+  get url()
+  {
+    return this._url;
+  }
 
 }

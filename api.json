@@ -31,7 +31,7 @@
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [],
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -40,7 +40,7 @@
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [],
       "url": "https://static6.depositphotos.com/1030334/671/i/600/depositphotos_6710151-stock-photo-eyes.jpg"
     },
     {
@@ -49,7 +49,12 @@
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [
+        {
+          "comment": "kjkjkjkj",
+          "id": 1
+        }
+      ],
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -58,7 +63,7 @@
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [],
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -67,7 +72,7 @@
       "allowComments": "true",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [],
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {
@@ -76,7 +81,7 @@
       "allowComments": "",
       "postDate": "2021-04-12T20:27:17.161Z",
       "likes": 0,
-      "comments": 0,
+      "comments": [],
       "url": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
     },
     {

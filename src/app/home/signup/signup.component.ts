@@ -68,7 +68,7 @@ export class SignUpComponent implements OnInit {
     const newUser = this.signupForm.getRawValue() as NewUser;
     this.signUpService.singUp(newUser).subscribe(
       (sucess) => {
-        this.router.navigate(['listar']);
+        this.router.navigate(['']);
       },
       (error) => {
         console.log(error);

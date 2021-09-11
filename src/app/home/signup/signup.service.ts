@@ -20,7 +20,7 @@ export class SignupService{
 
   singUp(user: NewUser)
   {
-    return this.http.post(`${API}/Users`, user);
+    return this.http.post(`${API}/user/signup`, user);
    }
 
 }

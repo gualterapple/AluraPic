@@ -24,7 +24,7 @@ export class PhotoFormComponent implements OnInit {
     this.photoForm = this.formBuilder.group(
       {
         file:['', Validators.required],
-        description:['', Validators.maxLength(300)],
+        description:['', [Validators.maxLength(300), Validators.required]],
         allowComments: [true]
       }
     )
@@ -34,12 +34,10 @@ export class PhotoFormComponent implements OnInit {
   {
     const description = this.photoForm.get('description')?.value;
     const allowComments = this.photoForm.get('allowComments')?.value;
-    const dados = this.photoForm.getRawValue();
     this.photoService.upload(description, allowComments, this.selectedPhoto).subscribe(
       () => {
         this.router.navigate(['']);
       });
-    console.log(dados);
   }
   uploadEvent(event: Event)
   {

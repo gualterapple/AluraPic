@@ -18,7 +18,7 @@ export class UserService {
 
   }
 
-  setToken(token: string)
+  setToken(token: any)
   {
     this.tokenService.setToken(token);
     this.decodeAndNotify();
@@ -32,7 +32,7 @@ export class UserService {
     const token = this.tokenService.getToken();
     if (token) {
       const user = jwt_decode(token) as User;
-      this.userName = user.Nome;
+      this.userName = user.name;
       this.userSubject.next(user);
     }
   }

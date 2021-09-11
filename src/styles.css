@@ -1,3 +1,8 @@
 body{
   padding-top: 6em;
 }
+
+.break-word
+{
+  word-break: break-all;
+}
