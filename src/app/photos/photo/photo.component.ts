@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
-const CLOUD = 'localhost:3000/imgs/';
+const CLOUD = 'http://localhost:3000/imgs/';
 
 @Component({
   selector: 'app-photo',
@@ -10,11 +11,13 @@ const CLOUD = 'localhost:3000/imgs/';
 export class PhotoComponent {
 
 
-  private _url = '';
+  private _url : any;
+
+  constructor(private sanitizer: DomSanitizer) { }
 
   @Input() description = '';
 
-  @Input() set url(url: string)
+  @Input() set url(url: any)
   {
     if(!url.startsWith('data'))
     {
@@ -26,7 +29,7 @@ export class PhotoComponent {
 
   get url()
   {
-    return this._url;
+    return this.sanitizer.bypassSecurityTrustUrl(this._url);
   }
 
 }

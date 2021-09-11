@@ -15,13 +15,11 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'home'
   },
-
   {
     path: 'home',
     canActivate: [LoginGuard],
     loadChildren: () => import("./home/home.module").then(x => x.HomeModule)
   },
-
   {
     path: 'user/:userName',
     component: PhotoListComponent,
