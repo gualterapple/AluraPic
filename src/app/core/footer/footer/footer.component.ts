@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user/user.service';
 import { Observable } from 'rxjs';
 import { User } from '../../user/user';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-footer',
@@ -15,9 +16,6 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.user$ = this.userService.getUser();
-    console.log('USER DO FOOTER');
-    if(this.user$)
-    console.log(this.user$);
   }
 
 }

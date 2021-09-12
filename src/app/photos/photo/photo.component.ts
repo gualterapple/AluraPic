@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
-const CLOUD = 'http://localhost:3000/imgs/';
+const CLOUD = environment.ApiUrl+'imgs/';
 
 @Component({
   selector: 'app-photo',
