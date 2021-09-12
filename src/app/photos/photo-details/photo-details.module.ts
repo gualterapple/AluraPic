@@ -4,13 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { VmessageModule } from 'src/app/shared/vmessage/vmessage.module';
 import { PhotoModule } from '../photo/photo.module';
+
 import { PhotoCommentsComponent } from './photo-comment/photo-comment.component';
 import { PhotoDetailsComponent } from './photo-details.component';
+import { PhotoOwnerOnlyDirective } from './photo-owner-only/photo-owner-only.directive';
 
 
 
 @NgModule({
-  declarations: [PhotoDetailsComponent, PhotoCommentsComponent],
+  declarations: [
+    PhotoDetailsComponent,
+     PhotoCommentsComponent,
+    PhotoOwnerOnlyDirective],
 
   exports: [PhotoDetailsComponent, PhotoCommentsComponent],
 
