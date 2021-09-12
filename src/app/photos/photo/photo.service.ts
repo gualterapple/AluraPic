@@ -40,12 +40,12 @@ export class PhotoService {
 
   getComment(id: number)
   {
-    return this.http.get<PhotoComment[]>(`${API}photos/${id}`);
+    return this.http.get<PhotoComment[]>(`${API}photos/${id}/comments`);
   }
 
-  addComment(id: number, comment: string)
+  addComment(id: number, commentText: string)
   {
-    return this.http.post<PhotoComment[]>(`${API}photos/${id}/comments`,{comment});
+    return this.http.post<PhotoComment[]>(`${API}photos/${id}/comments`,{commentText});
   }
 
 }
