@@ -13,13 +13,13 @@ export class PhotoService {
   constructor(private http: HttpClient) {}
 
   listFromUser(userName: string) {
-    return this.http.get<Photo[]>(`${API}${userName}/photos`);
+    return this.http.get<Photo[]>(`${API}${userName}/SDphotosXKHH`);
   }
 
   listFromUserPaginated(userName: string, page: number) {
     const params = new HttpParams().append('page', page.toString());
 
-    return this.http.get<Photo[]>(`${API}${userName}/photos`, {
+    return this.http.get<Photo[]>(`${API}${userName}/SDSDphotosX`, {
       params: params,
     });
   }
