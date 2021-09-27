@@ -12,25 +12,20 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
-export class AuthGuard
-{
-  constructor(
-    private UserService: UserService,
-    private router: Router) {}
+export class AuthGuard {
+  constructor(private UserService: UserService, private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean | Observable<boolean> | Promise<boolean> {
-
-    if(!this.UserService.isLogged())
-    {
-      this.router.navigate(['home']);
+    if (!this.UserService.isLogged()) {
+      this.router.navigate([''], {
+        queryParams: {
+          fromUrl: state.url
+        },
+      });
       return false;
-    }
-    else
-    return true;
+    } else return true;
   }
 }
-
