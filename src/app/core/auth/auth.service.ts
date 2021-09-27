@@ -27,7 +27,6 @@ export class AuthService {
       tap((res) => {
         const authToken = res.headers.get('x-access-token');
         this.UserService.setToken(authToken);
-        console.log(authToken);
       })
     );
     /*return this.http.get(APIM)

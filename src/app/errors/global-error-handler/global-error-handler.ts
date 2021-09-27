@@ -11,9 +11,7 @@ import { environment } from "src/environments/environment";
 export class GlobalErrorHandler implements ErrorHandler{
 
   constructor(private injector: Injector)
-  {
-
-  }
+  {}
 
   handleError(error: any): void {
 
@@ -38,8 +36,8 @@ export class GlobalErrorHandler implements ErrorHandler{
 
       console.log(message);
       console.log(stackTraceAsString);
-      console.log('O que será enviado para o servidor:');
-      logServeService.log({message, url, userName: userService.getUserName(), stack: stackTraceAsString}).subscribe(
+      const userName = userService.getUserName();
+      logServeService.log({message, url, userName, stack: stackTraceAsString}).subscribe(
         () =>
         {
           console.log('Log enviado com sucesso');

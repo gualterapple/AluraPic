@@ -11,6 +11,7 @@ import {
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
+import { userNamePassword } from './username-password.validator';
 
 @Component({
   templateUrl: './signup.component.html',
@@ -61,18 +62,21 @@ export class SignUpComponent implements OnInit {
           Validators.maxLength(14),
         ],
       ],
-    });
+    }, {validator: userNamePassword});
   }
 
   signUp() {
-    const newUser = this.signupForm.getRawValue() as NewUser;
-    this.signUpService.singUp(newUser).subscribe(
-      (sucess) => {
-        this.router.navigate(['']);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    if(this.signupForm.valid && !this.signupForm.pending)
+    {
+      const newUser = this.signupForm.getRawValue() as NewUser;
+      this.signUpService.singUp(newUser).subscribe(
+        (sucess) => {
+          this.router.navigate(['']);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
   }
 }
